@@ -29,8 +29,7 @@ console.log(students[42])
 console.log(Object.keys(students).length)
 
 // 11. Can you define a key of `let or var` in any object? Reason.
-//no we cannot as keys in js dont require any data type and can hold any value
-
+students.let = "djebdje"
 // 12. Delete the `isAdult` property from the object `students`. Also, print the object before or after deleting the property
 console.log(students);
 delete students.isAdult;
