@@ -25,6 +25,10 @@ let movies = [
   },
 ];
 
+function log(item){
+  console.log(item);
+}
+
 /*
 Go through the variable named movies properly before solvinf the exercises.
 Use the variable named movies to solve the requirement below.
@@ -32,33 +36,49 @@ Use the variable named movies to solve the requirement below.
 
 // 1. Log the value of the title key in the first movie of the array named `movies`
 
+log(movies[0].title)
 // 2. Log the value of the title key in the last movie of the array named `movies`
-
+log(movies[movies.length-1].title)
 // 3. Log the value of the title key in the second movie (index 1) of the array named `movies`
+log(movies[1].title)
 
 // 4. Log the value of the year key in the first movie of the array named `movies`
+log(movies[0].year)
 
 // 5. Log all the named of actors (key named actors) of the first movie
+log(movies[0].actors)
 
 // 6. Log the name of the first actor of the first movie
+log(movies[0].actors[0])
 
 // 7. Log the name of the last actor of the first movie
+log(movies[0].actors[movies[0].actors.length-1])
 
 // 8. Log the name of the second actor (index 1) of the first movie
+log(movies[0].actors[1])
 
 // 9. Log the name of the second actor (index 1) of the second movie
+log(movies[1].actors[1])
 
 // 10. Log the name of the last actor of the thrid movie
+log(movies[movies.length-1].actors[movies[0].actors.length-1])
 
 // 11. Log the name of the second actor (index 1) of the third movie
+log(movies[movies.length-1].actors[1])
 
 // 12. Log all the genres of the third movie
+log(movies[movies.length-1].genres)
+
 
 // 13. Log all the genres of the first movie
+log(movies[0].genres)
+
 
 // 14. Log the first genres of the first movie
+log(movies[0].genres[0])
 
 // 15. Log the first genres of the second movie
+log(movies[1].genres[0])
 
 // 16. Log the last genres of the first movie (using the length property of array)
 
@@ -89,3 +109,4 @@ Use the variable named movies to solve the requirement below.
 // 29. Log the name of all the movies with exactly 3 actors
 
 // 30. Log the name of all the movies with year `2018`
+
