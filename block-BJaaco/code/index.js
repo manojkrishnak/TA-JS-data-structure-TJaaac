@@ -109,21 +109,33 @@ function revert(arr) {
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function clear(arr) {
-  // your code
-  for(let i =0; i<arr.length; i++){
-    if(arr[i] === false || arr[i] === undefined || arr[i] === "" ||arr[i] === 0 || arr[i] === null){
-      arr.splice(i,1);
+// function clear(arr) {
+//   // your code
+//   for(let i =0; i<arr.length; i++){
+//     if(arr[i] === false || arr[i] === undefined || arr[i] === "" ||arr[i] === 0 || arr[i] === null){
+//       arr.splice(i,1);
+//     }
+//   }
+  
+//   return arr;
+// }
+function isUnwanted(value){
+  return (value === false || value === undefined || value === "" ||value === 0 || value === null);
+}
+function clear(arr){
+  let final = [];
+  for(let i=arr.length; i>=0; i--){
+    if(!isUnwanted(arr[i])){
+      final.push(arr[i]);
     }
   }
-  
-  return arr;
+return final;
 }
 
 // Uncomment the code below and test the output
-// console.log(clear([1, 2, 3, 4, '', 0, null, undefined])); // [4, 3, 2, 1]
-// console.log(clear(['a', undefined, 'd', 0, 'c', 'b'])); // ['b', 'c', 'd', 'a']
-// console.log(clear(['Ryan', null, 0, 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
+console.log(clear([1, 2, 3, 4, '', 0, null, undefined])); // [4, 3, 2, 1]
+console.log(clear(['a', undefined, 'd', 0, 'c', 'b'])); // ['b', 'c', 'd', 'a']
+console.log(clear(['Ryan', null, 0, 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
 
 /*
 
